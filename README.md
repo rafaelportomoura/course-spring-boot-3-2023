@@ -61,8 +61,8 @@ Isso irá construir a imagem do Docker e iniciar o contêiner do PostgreSQL junt
 
 ## Referências
 
-1. [Spring][https://spring.io/]
-2. [Spring Boot 3 | Curso Completo 2023][https://www.youtube.com/watch?v=wlYvA2b1BWI&t=4918s&ab_channel=MichelliBrito]
+1. [Spring](https://spring.io/)
+2. [Spring Boot 3 | Curso Completo 2023](https://www.youtube.com/watch?v=wlYvA2b1BWI&t=4918s&ab_channel=MichelliBrito)
 3. [Eclipse Temurin Docker Image](https://hub.docker.com/_/eclipse-temurin)
 4. [Postgres Docker Image](https://hub.docker.com/_/postgres)
 5. [Adminer Docker Image](https://hub.docker.com/_/adminer)
