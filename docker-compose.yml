@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  # spring:
+  #   container_name: javaspringboot
+  #   build: .
+  #   restart: always
+  #   depends_on:
+  #     - db
+  #   env_file:
+  #     - back.env
+  #     - db.env
+  # network_mode: service:db
+
+  db:
+    container_name: postgresdb
+    image: postgres:15.3-alpine3.18
+    restart: unless-stopped
+    env_file: db.env
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/
+
+  adminer-db:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    network_mode: service:db
+
+volumes:
+  postgres-data:
