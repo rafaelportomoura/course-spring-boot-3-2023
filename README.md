@@ -1,6 +1,6 @@
 # Spring Boot 3 - 2023
 
-O curso "Spring Boot 3 | Curso Completo 2023" tem o objetivo de construir uma API RESTful completa utilizando as versões mais recentes do Spring Boot 3, Spring Framework 6 e Java 17, seguindo os princípios do Modelo de Maturidade de Richardson. 
+O curso ["Spring Boot 3 | Curso Completo 2023"](https://www.youtube.com/watch?v=wlYvA2b1BWI&t=4918s&ab_channel=MichelliBrito) tem o objetivo de construir uma API RESTful completa utilizando as versões mais recentes do Spring Boot 3, Spring Framework 6 e Java 17, seguindo os princípios do Modelo de Maturidade de Richardson. 
 
 Durante o curso, a construção da API abrangerá todos os passos necessários. O projeto "Products API RESTful" será iniciado para explorar as funcionalidades e atualizações oferecidas pelo Spring Boot 3. A configuração inicial do projeto será realizada no Initializr, permitindo um início eficiente. 
 
