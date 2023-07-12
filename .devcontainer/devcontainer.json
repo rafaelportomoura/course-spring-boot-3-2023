@@ -6,7 +6,7 @@
 		"../docker-compose.yml",
 		"docker-compose.yml"
 	],
-	"service": "app",
+	"service": "spring",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {},
@@ -20,34 +20,65 @@
 		"vscode": {
 			"extensions": [
 				"vscjava.vscode-java-pack",
-				"vscode-icons-team.vscode-icons",
+				"pkief.material-icon-themes",
 				"ms-azuretools.vscode-docker",
 				"streetsidesoftware.code-spell-checker",
 				"streetsidesoftware.code-spell-checker-portuguese-brazilian",
 				"redhat.vscode-xml",
 				"irongeek.vscode-env",
-				"dracula-theme.theme-dracula"
+				"vmware.vscode-boot-dev-pack",
+				"dracula-theme.theme-dracula",
+				"sonarsource.sonarlint-vscode",
+				"jeff-hykin.better-dockerfile-syntax"
 			],
 			"settings": {
-				"workbench.iconTheme": "vscode-icons",
-				"workbench.preferredDarkColorTheme": "Dracula",
 				"editor.defaultFormatter": "redhat.java",
+				"editor.fontFamily": "'JetBrainsMono Nerd Font','FiraCode Nerd Font', Consolas, 'Courier New',monospace",
+				"editor.tabSize": 2,
+				"editor.fontSize": 14,
+				"editor.lineHeight": 22,
+				"editor.suggestLineHeight": 19,
+				"editor.letterSpacing": 0.5,
+				"editor.renderLineHighlight": "all",
+				"terminal.integrated.drawBoldTextInBrightColors": false,
+				"terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font','FiraCode Nerd Font', Consolas, 'Courier New',monospace",
+				"terminal.integrated.fontSize": 14,
+				"terminal.integrated.lineHeight": 1.25,
+				"terminal.integrated.letterSpacing": 1,
+				"debug.console.fontFamily": "'JetBrainsMono Nerd Font','FiraCode Nerd Font', Consolas, 'Courier New',monospace",
+				"debug.console.fontSize": 16,
+				"debug.console.lineHeight": 26,
+				"workbench.iconTheme": "material-icon-theme",
+				"workbench.colorTheme": "Dracula",
 				"cSpell.words": [
-					"Temurin"
+					"Temurin",
+					"devcontainers",
+					"devcontainer",
+					"stuartleeks",
+					"vscjava",
+					"brazilian",
+					"redhat",
+					"irongeek",
+					"vmware",
+					"dracula",
+					"sonarsource",
+					"sonarlint",
+					"zerodind",
+					"jeff",
+					"hykin"
 				],
-				"java.compile.nullAnalysis.mode": "automatic"
+				"java.compile.nullAnalysis.mode": "automatic",
+				"boot-java.rewrite.reconcile": true
 			}
 		}
-	}
+	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {}
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// This can be used to network with other containers or with the host.
 	// "forwardPorts": [5432],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "java -version",
-	// Configure tool-specific properties.
-	// "customizations": {},
+	"postCreateCommand": "/bin/sh /workspaces/${localWorkspaceFolderBasename}/.devcontainer/postCreate.sh",
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }

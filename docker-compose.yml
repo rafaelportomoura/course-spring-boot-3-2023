@@ -1,17 +1,18 @@
-version: '3'
+version: '3.8'
 
 services:
-  # spring:
-  #   container_name: javaspringboot
-  #   build: .
-  #   restart: always
-  #   depends_on:
-  #     - db
-  #   env_file:
-  #     - back.env
-  #     - db.env
-  #   networks:
-  #     - data
+  spring:
+    container_name: javaspringboot
+    image: rafaelportomoura/javaspringboot:latest
+    build: .
+    restart: always
+    depends_on:
+      - db
+    env_file:
+      - back.env
+      - db.env
+    networks:
+      - data
 
   db:
     container_name: postgresdb
