@@ -82,7 +82,7 @@
 	// This can be used to network with other containers or with the host.
 	// "forwardPorts": [5432],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "/bin/sh /workspaces/${localWorkspaceFolderBasename}/.devcontainer/postCreate.sh",
+	"postCreateCommand": "/bin/bash /workspaces/${localWorkspaceFolderBasename}/.devcontainer/postCreate.sh"
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
