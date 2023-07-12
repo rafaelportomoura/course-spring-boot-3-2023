@@ -10,7 +10,7 @@ public class ApiException extends Exception {
 
   public ApiException(String message, HttpStatusCode statusCode) {
     super(message);
-    this.body = new HashMap();
+    this.body = new HashMap<>();
     this.body.put("message", message);
     this.statusCode = statusCode;
   }

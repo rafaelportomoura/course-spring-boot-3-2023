@@ -1,5 +1,8 @@
 package com.example.springboot.controllers;
 
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
@@ -34,13 +37,22 @@ public class ProductController {
 
   @GetMapping("/products")
   public ResponseEntity<List<ProductModel>> getAll() {
-    return ResponseEntity.status(HttpStatus.OK).body(productService.list());
+    List<ProductModel> productsList = productService.list();
+    if (!productsList.isEmpty()) {
+      for (ProductModel product : productsList) {
+        UUID id = product.getIdProduct();
+        product.add(linkTo(methodOn(ProductController.class).getOne(id)).withSelfRel());
+      }
+    }
+    return ResponseEntity.status(HttpStatus.OK).body(productsList);
   }
 
   @GetMapping("/products/{id}")
   public ResponseEntity<Object> getOne(@PathVariable(value = "id") UUID id) {
     try {
-      return ResponseEntity.status(HttpStatus.OK).body(productService.findById(id));
+      var product = productService.findById(id);
+      product.add(linkTo(methodOn(ProductController.class).getAll()).withRel("Product List"));
+      return ResponseEntity.status(HttpStatus.OK).body(product);
     } catch (ApiException e) {
       return ResponseEntity.status(e.getStatusCode()).body(e.getBody());
     }
