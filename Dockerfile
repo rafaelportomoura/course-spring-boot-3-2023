@@ -27,9 +27,6 @@ ENV JAR_FILE "${ARTIFACT_ID_VERSION}.jar"
 COPY --from=buildstage /javaruntime $JAVA_HOME
 COPY --from=buildstage /opt/app/target/${JAR_FILE} .
 
-ENV PORT 3000
-EXPOSE ${PORT}
-
-RUN echo "java -jar $JAR_FILE --server.port=$PORT" >start.sh
+RUN echo "java -jar $JAR_FILE" >start.sh
 CMD [ "/bin/sh", "start.sh" ]
 
