@@ -10,7 +10,8 @@ services:
   #   env_file:
   #     - back.env
   #     - db.env
-  # network_mode: service:db
+  #   networks:
+  #     - data
 
   db:
     container_name: postgresdb
@@ -19,13 +20,19 @@ services:
     env_file: db.env
     volumes:
       - postgres-data:/var/lib/postgresql/data/
+    networks:
+      - data
 
   adminer-db:
     image: adminer
     restart: always
     ports:
       - 8080:8080
-    network_mode: service:db
+    networks:
+      - data
 
 volumes:
   postgres-data:
+
+networks:
+  data:
