@@ -36,7 +36,7 @@ cd course-spring-boot-3-2023
 
 ```.env
 POSTGRES_DB={nome_do_banco}
-POSTGRES_USER={usuario}
+POSTGRES_USER={usuário}
 POSTGRES_PASSWORD={senha}
 ```
 
@@ -44,6 +44,7 @@ POSTGRES_PASSWORD={senha}
 
 ```.env
 DB_HOST=db
+DB_PORT=5432
 ```
 
 ## Rodando o Projeto
@@ -63,6 +64,6 @@ Isso irá construir a imagem do Docker e iniciar o contêiner do PostgreSQL junt
 
 1. [Spring](https://spring.io/)
 2. [Spring Boot 3 | Curso Completo 2023](https://www.youtube.com/watch?v=wlYvA2b1BWI&t=4918s&ab_channel=MichelliBrito)
-3. [Eclipse Temurin Docker Image](https://hub.docker.com/_/eclipse-temurin)
-4. [Postgres Docker Image](https://hub.docker.com/_/postgres)
-5. [Adminer Docker Image](https://hub.docker.com/_/adminer)
+3. [🐋 Maven](https://hub.docker.com/_/maven)
+4. [🐋 Postgres](https://hub.docker.com/_/postgres)
+5. [🐋 Adminer](https://hub.docker.com/_/adminer)
