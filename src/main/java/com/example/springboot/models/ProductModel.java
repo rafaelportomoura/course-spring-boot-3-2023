@@ -44,8 +44,4 @@ public class ProductModel implements Serializable {
   public void setValue(BigDecimal value) {
     this.value = value;
   }
-
-  public static long getSerialversionuid() {
-    return serialVersionUID;
-  }
 }
