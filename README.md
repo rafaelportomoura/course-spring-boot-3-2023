@@ -11,7 +11,7 @@ Os tópicos abordados incluem:
 
 Os principais métodos HTTP, como POST, GET, PUT e DELETE, serão explicados e implementados de acordo com a necessidade do projeto. O mapeamento de dados de entrada será explorado usando DTOs em conjunto com Records. Recursos de _HATEOAS_ serão introduzidos para enriquecer as respostas da API, permitindo a criação de hipermídias. 
 
-Ao final do curso, são fornecidas sugestões para estudos adicionais e continuidade do aprendizado. O projeto desenvolvido durante o curso estará disponível no [GitHub](https://github.com/MichelliBrito/spring-boot-3-curso-completo-2023). 
+Ao final do curso, são fornecidas sugestões para estudos adicionais e continuidade do aprendizado. O projeto desenvolvido durante o curso estará disponível no [GitHub](https://github.com/MichelliBrito/springboot-api-ebook). 
 
 ## Requisitos
 
