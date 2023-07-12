@@ -65,7 +65,11 @@
 					"sonarlint",
 					"zerodind",
 					"jeff",
-					"hykin"
+					"hykin",
+					"Initializr",
+					"_HATEOAS_",
+					"Adminer",
+					"pkief"
 				],
 				"java.compile.nullAnalysis.mode": "automatic",
 				"boot-java.rewrite.reconcile": true
